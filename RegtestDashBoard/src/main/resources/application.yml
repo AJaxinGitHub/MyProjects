@@ -1,0 +1,38 @@
+server:
+  port: 18082
+custom: 
+  rpc: 
+    userName: userrpc
+    passWord: userpassword
+    host: 192.168.0.3
+    port: 18443
+
+  HttpUtilUrl:
+    url_1: https://www.okcoin.com
+    url_2: /api/v1/ticker.do?
+    url_3: symbol=btc_usd
+
+spring:
+  datasource:
+    driverclassname: org.postgresql.Driver
+    url: jdbc:postgresql://192.168.0.3:5432/postgres
+    username: postgres
+    password: 1234
+  # 静态文件请求匹配方式
+  mvc:
+    static-path-pattern: /**
+  # 配置静态资源文件路径
+  resources:
+    static-locations:
+    - classpath:/META-INF/resources/
+    - classpath:/resources/
+    - classpath:/static/
+    - classpath:/public/
+    - classpath:/templates/
+  #不放缓存，不方便调试
+  thymeleaf:
+    cache:  false
+#   prefix: classpath:/templates/views/
+    suffix: .html
+
+

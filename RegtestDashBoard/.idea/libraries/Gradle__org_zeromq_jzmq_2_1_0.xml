@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.zeromq:jzmq:2.1.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zeromq/jzmq/2.1.0/bb11b0121719112d932fde351c24b57b0c9e63cd/jzmq-2.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.zeromq/jzmq/2.1.0/dfd6d7f41907218a059f9ecebd76b61f9b475be4/jzmq-2.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.foldmenu {
+    width: 600px;
+    background: #999;
+}
+
+.foldmenu ul {
+    list-style-type: none;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.foldmenu ul.open {
+    height: auto;
+}
+
+.foldmenu ul span {
+    display: block;
+    padding-left: 10px;
+    color: #ffffff;
+    border-top: 1px solid black;
+}
+
+.foldmenu ul li {
+    border-bottom: 1px solid #DDDDDD;
+}
+
+.foldmenu li a {
+    background-color: #EEEEEE;
+    color: #ff4500;
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    text-align: left;
+}
+
+.foldmenu li a:hover {
+    background-color: coral;
+    color: #ffffff;
+}

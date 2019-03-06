@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: wf.bitcoin:JavaBitcoindRpcClient:0.9.13">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/wf.bitcoin/JavaBitcoindRpcClient/0.9.13/dba9483a234b1d9f0b53ab43ef743c0dc51dbb2d/JavaBitcoindRpcClient-0.9.13.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/wf.bitcoin/JavaBitcoindRpcClient/0.9.13/a6f7f3ba63658a36e4e7cee36ef4983de8b518e5/JavaBitcoindRpcClient-0.9.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

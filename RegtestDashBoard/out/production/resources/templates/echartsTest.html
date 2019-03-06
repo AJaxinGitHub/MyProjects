@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="/webjars/jquery/3.3.1/jquery.js"></script>
+    <script type="text/javascript" src="/webjars/echarts/4.0.4/dist/echarts.js"></script>
+    <script type="text/javascript" src="/webjars/echarts/4.0.4/dist/echarts.common.min.js"></script>
+    <title>Title</title>
+</head>
+
+<script type="text/javascript">
+//my echarts
+//============================================================== 
+var myChart 
+var option
+
+$(function () {
+    initChart()
+    //基于准备好的dom，初始化echarts实例
+    myChart = echarts.init(document.getElementById('myecharts'));
+    //myChart.setOption(option)
+})
+function initChart() {
+     option = {
+         title: {
+             text: "Regtest挖矿数历史记录",
+             x: "center"
+         },
+         tooltip: {
+             trigger: "item",
+             formatter: "{a} <br/>{b} : {c}块"
+         },
+         legend: {
+             x: 'left',
+             data: []
+         },
+         xAxis: [
+             {
+                 type: "category",
+                 name: "日期",
+                 splitLine: {show: false},
+                 data: []
+             }
+         ],
+         yAxis: [
+             {
+                 type: "value",
+                 axisLabel: {
+                     formatter: '{value} 块'
+                 },
+                 name: "数量",
+                 max: 200,
+                 min: 0,
+                 splitNumber: 5
+             }
+         ],
+         toolbox: {
+             show: true,
+             feature: {
+                 mark: {
+                     show: true
+                 },
+                 dataView: {
+                     show: true,
+                     readOnly: true
+                 },
+                 restore: {
+                     show: true
+                 },
+                 saveAsImage: {
+                     show: true
+                 }
+             }
+         },
+         calculable: true,
+         series: []
+     };
+}
+
+function showchart(){
+	$.ajax({
+		 type: "GET",
+		 url: "blocksAndTime",
+		 data: {},
+		 success: function (r) {
+		 	initChart()
+		     option.legend.data[0] = "10.12.33.222"
+		     //pie是饼状图  line 是折线图  bar是柱状图
+		     option.series[0] = {"name":"GG", "type":"line", "data": []}
+		     for (var i in r) {
+		         option.series[0].data[i] = r[i].blockcount
+		         //alert(r[i].blockcount);
+		         option.xAxis[0].data[i] = r[i].time
+		     }
+		 	myChart.setOption(option)
+		 }
+		});
+}
+
+</script>
+<body>
+
+<a href="javascript:void(0)" onclick="showchart()"
+   style="text-decoration: none;margin-left: 140px">hhhhhhhhhhhhh</a>
+<div id="myecharts" style="height:460px;width: 85%;margin: 20px auto 0"></div>
+</body>
+</html>
